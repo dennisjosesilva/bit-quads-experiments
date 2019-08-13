@@ -1,0 +1,9 @@
+bash benchmark_opt_quads.sh
+sleep 15m
+bash benchmark_im.sh
+sleep 15m
+bash benchmark_non_opt_quads.sh
+sleep 15m
+bash benchmark_chaincode.sh
+sleep 15m
+bash benchmark_non_inc_bitquads.sh
