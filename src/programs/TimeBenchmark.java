@@ -18,6 +18,7 @@ import mmlib4j.images.GrayScaleImage;
 import mmlib4j.representation.tree.componentTree.ConnectedFilteringByComponentTree;
 import mmlib4j.utils.AdjacencyRelation;
 import mmlib4j.utils.ImageBuilder;
+import mmlib4j.utils.Utils;
 
 public class TimeBenchmark {
 	public static void main(String[] args) throws IOException {
@@ -83,6 +84,7 @@ public class TimeBenchmark {
 	}
 	
 	private static void compute(String methodName, File file, PrintWriter writer) throws IOException {
+		Utils.debug = false;
 		AdjacencyRelation adj = AdjacencyRelation.getAdjacency8();
 		GrayScaleImage img = ImageBuilder.openGrayImage(file);
 		ConnectedFilteringByComponentTree tree = new ConnectedFilteringByComponentTree(img, adj, true);
