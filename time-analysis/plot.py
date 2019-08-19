@@ -20,21 +20,21 @@ opt_quads = add_num_pixels_column(pd.read_csv("./opt-quads/summary.csv", sep=";"
 
 
 steps = np.arange(opt_quads.shape[0])
-plt.plot(steps, np.log(opt_quads["mean_time"]), label="opt-quads")
-plt.plot(steps, np.log(im["mean_time"]), label="IM")
-plt.plot(steps, np.log(non_inc_bitquads["mean_time"]), label="NIQC")
-plt.plot(steps, np.log(non_opt_quads["mean_time"]), label="non-opt-quads")
-plt.plot(steps, np.log(chaincode["mean_time"]), label="CCM")
+# plt.plot(steps, np.log(opt_quads["mean_time"]), label="opt-quads")
+# plt.plot(steps, np.log(im["mean_time"]), label="IM")
+# plt.plot(steps, np.log(non_inc_bitquads["mean_time"]), label="NIQC")
+# plt.plot(steps, np.log(non_opt_quads["mean_time"]), label="non-opt-quads")
+# plt.plot(steps, np.log(chaincode["mean_time"]), label="CCM")
 
 plt.margins(0.05, 0.3)
 plt.xticks(np.arange(opt_quads.shape[0]), opt_quads["size"], rotation=30)
 plt.subplots_adjust(bottom=0.15)
 
-# plt.plot(steps,  opt_quads["mean_time"])
-# plt.plot(steps, im["mean_time"])
-# plt.plot(steps, non_inc_bitquads["mean_time"])
-# plt.plot(steps, non_opt_quads["mean_time"])
-# plt.plot(steps, opt_quads["mean_time"])
+plt.plot(steps,  opt_quads["mean_time"], label="opt-quads")
+plt.plot(steps, im["mean_time"], label="im")
+plt.plot(steps, non_inc_bitquads["mean_time"], label="non_inc_bitquads")
+plt.plot(steps, non_opt_quads["mean_time"], label="non_opt_quads")
+plt.plot(steps, opt_quads["mean_time"], label="opt_quads")
 
 plt.legend()
 plt.show()
