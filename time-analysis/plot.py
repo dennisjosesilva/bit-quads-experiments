@@ -30,11 +30,13 @@ plt.margins(0.05, 0.3)
 plt.xticks(np.arange(opt_quads.shape[0]), opt_quads["size"], rotation=30)
 plt.subplots_adjust(bottom=0.15)
 
-plt.plot(steps,  opt_quads["mean_time"], label="opt-quads")
-plt.plot(steps, im["mean_time"], label="im")
-plt.plot(steps, non_inc_bitquads["mean_time"], label="non_inc_bitquads")
-plt.plot(steps, non_opt_quads["mean_time"], label="non_opt_quads")
+#plt.plot(steps,  chaincode["mean_time"], label="chaincode")
+#plt.plot(steps, im["mean_time"], label="im")
+#plt.plot(steps, non_inc_bitquads["mean_time"], label="non_inc_bitquads")
+#plt.plot(steps, non_opt_quads["mean_time"], label="non_opt_quads")
 plt.plot(steps, opt_quads["mean_time"], label="opt_quads")
+
+# plt.ylim(0, 15000)
 
 plt.legend()
 plt.show()

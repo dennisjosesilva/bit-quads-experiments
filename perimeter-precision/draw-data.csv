@@ -1,0 +1,8 @@
+node-id;type;radius;width;height
+0;rectangle;;1200;1200
+6;circle;60;;
+4;circle;120;;
+2;circle;200;;
+1;ellipse;;300;200
+3;ellipse;;200;150
+5;ellipse;;80;120

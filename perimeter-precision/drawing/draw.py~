@@ -1,0 +1,14 @@
+from lib.drawing import *
+
+f = np.zeros((1200, 1200), np.uint8)
+
+f1 = circle(60, graylevel=255)
+f2 = circle(120, graylevel=120)
+f3 = circle(200, graylevel=60)
+
+f[400:800,50:450] = f3
+f[500:740,100:340] = f2
+
+
+
+mi.imsave("ellipse.png", f)
